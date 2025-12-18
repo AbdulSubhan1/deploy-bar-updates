@@ -1,5 +1,5 @@
 cask "deploybar" do
-  version "0.0.11"
+  version :latest
   
   arch arm: "aarch64", intel: "x64"
   
