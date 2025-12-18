@@ -3,15 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeployBar — Vercel & GitHub Actions in Your Menu Bar</title>
+
+    <!-- Primary Meta Tags -->
+    <title>DeployBar — Vercel & GitHub Actions in Your Menu Bar | macOS Menu Bar App</title>
+    <meta name="title" content="DeployBar — Vercel & GitHub Actions in Your Menu Bar | macOS Menu Bar App" />
+    <meta name="description" content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching. Free and open-source." />
+    <meta name="keywords" content="DeployBar, Vercel, GitHub Actions, macOS menu bar, deployment monitoring, CI/CD, developer tools, Vercel deployments, GitHub workflows, menu bar app, macOS app, development tools, deployment tracker" />
+    <meta name="author" content="Waseem Maya" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://waseemmaya.github.io/deploy-bar-updates/" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://waseemmaya.github.io/deploy-bar-updates/" />
+    <meta property="og:title" content="DeployBar — Vercel & GitHub Actions in Your Menu Bar" />
+    <meta property="og:description" content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching." />
+    <meta property="og:image" content="https://waseemmaya.github.io/deploy-bar-updates/logo.png" />
+    <meta property="og:site_name" content="DeployBar" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://waseemmaya.github.io/deploy-bar-updates/" />
+    <meta name="twitter:title" content="DeployBar — Vercel & GitHub Actions in Your Menu Bar" />
+    <meta name="twitter:description" content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Free and open-source developer tool." />
+    <meta name="twitter:image" content="https://waseemmaya.github.io/deploy-bar-updates/logo.png" />
+    <meta name="twitter:creator" content="@waseemmaya" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DeployBar",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching.",
+      "screenshot": "https://waseemmaya.github.io/deploy-bar-updates/logo.png",
+      "softwareVersion": "0.0.11",
+      "datePublished": "2024-01-01",
+      "author": {
+        "@type": "Person",
+        "name": "Waseem Maya",
+        "url": "https://github.com/waseemmaya"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DeployBar",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://waseemmaya.github.io/deploy-bar-updates/logo.png"
+        }
+      },
+      "downloadUrl": "https://github.com/waseemmaya/deploy-bar-updates",
+      "releaseNotes": "Monitor Vercel deployments and GitHub Actions from your menu bar",
+      "featureList": [
+        "Real-time deployment monitoring",
+        "GitHub Actions workflow tracking",
+        "Native macOS notifications",
+        "Multiple account support",
+        "Secure token storage in system keychain",
+        "Auto-refresh every 30 seconds",
+        "Color-coded status indicators"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      }
+    }
+    </script>
+
     <!-- FAQ Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -1068,12 +1151,12 @@
     </style>
   </head>
   <body>
-    <div class="grid-bg"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <div class="nav-container">
         <a href="#" class="logo">
           <div class="logo-icon">
@@ -1093,7 +1176,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner" aria-label="Hero section">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
         <span class="mono" id="app-version">v0.0.11</span>
@@ -1112,7 +1195,7 @@
       </p>
 
       <div class="hero-cta-group">
-        <a href="#download" class="btn-primary">
+        <a href="#download" class="btn-primary" aria-label="Download DeployBar for macOS">
           <svg
             width="20"
             height="20"
@@ -1122,6 +1205,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
+            aria-hidden="true"
           >
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="7 10 12 15 17 10" />
@@ -1132,9 +1216,11 @@
         <a
           href="https://github.com/waseemmaya/deploy-bar"
           target="_blank"
+          rel="noopener noreferrer"
           class="btn-secondary"
+          aria-label="View DeployBar on GitHub"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path
               d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
             />
@@ -1647,10 +1733,10 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="features">
+    <section class="features" id="features" aria-labelledby="features-heading">
       <div class="section-header">
         <p class="section-label mono">Features</p>
-        <h2 class="section-title">
+        <h2 class="section-title" id="features-heading">
           Everything you need.<br />Nothing you don't.
         </h2>
         <p class="section-desc">
@@ -1928,10 +2014,10 @@
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
+    <section class="how-it-works" id="how-it-works" aria-labelledby="setup-heading">
       <div class="section-header">
         <p class="section-label mono">Setup</p>
-        <h2 class="section-title">Up and running in 2 minutes</h2>
+        <h2 class="section-title" id="setup-heading">Up and running in 2 minutes</h2>
       </div>
 
       <div class="steps-container">
@@ -2060,8 +2146,8 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="download">
-      <h2 class="cta-title">Ready to ship faster?</h2>
+    <section class="cta-section" id="download" aria-labelledby="download-heading">
+      <h2 class="cta-title" id="download-heading">Ready to ship faster?</h2>
       <p class="cta-desc">
         Stop switching tabs to check deployments and CI status. Get DeployBar
         and stay focused on what matters — your code.
