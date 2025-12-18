@@ -1,0 +1,21 @@
+{
+  "version": "0.0.11",
+  "notes": "See the assets to download this version and install.",
+  "pub_date": "2025-12-17T22:58:16Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaXNxZ0RCWCt4a0lCcWFBcnhwdnREeEx5NzdKa3NDKzJKQXBEQ2gzUmdXTjRDQ0lqQmZ6N1pVOHVaOHZUcHFRdm9xWjJIWWpQV3FoZUNrODdIZzZYVGdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY2MDEyMjUyCWZpbGU6RGVwbG95QmFyLmFwcC50YXIuZ3oKenIyTWRnWjB1WW9aWEZwRWpobGMyT2g2NWdDVS9VNk43cm1hQUtDMm5ETDJnL1NRTFhMVzFQVE40Z01SUGxKV2FXWDcrcW9ySUJQeC9pOTlhdU15QWc9PQo=",
+      "url": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_aarch64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaWkyZHRISXBZZGhxN205SFA2Z29FeXBWTnFWUVdZVjVBQ3VCSlpZemIwcTd5bDAyRXNSQlU5LzVIbzdheTg1YlRRdFVGc2hFR3FhTERYUHFheHJnV3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY2MDEyMjY1CWZpbGU6RGVwbG95QmFyLmFwcC50YXIuZ3oKMGVQVFR3QjZFaXUyRGYyMmh3cWQ5NVl2czBRd0wwQzJkQ3MrUEFHT2Z5bkVuM1NuLzdTbFhIbTZlVGtXNTA0a2h5c3lOWDdyc1E0aU1FSlRmRnRaQWc9PQo=",
+      "url": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.app.tar.gz"
+    }
+  },
+  "downloads": {
+    "dmg": {
+      "aarch64": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_aarch64.dmg",
+      "x86_64": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.dmg"
+    }
+  }
+}
