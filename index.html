@@ -12,6 +12,64 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- FAQ Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is DeployBar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DeployBar is a free, open-source macOS menu bar app that lets you monitor your Vercel deployments and GitHub Actions workflows in real-time. Instead of constantly switching tabs to check deployment status, you get instant notifications and updates right from your menu bar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DeployBar free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! DeployBar is completely free and open-source. You can download it, use it, and even contribute to its development on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which macOS versions are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DeployBar works on macOS 11 (Big Sur) and later. It supports both Apple Silicon (M1/M2/M3) and Intel-based Macs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my tokens stored securely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Your Vercel and GitHub tokens are stored in the macOS system keychain, not in plain text or localStorage. This is the same secure storage that Apple uses for passwords and sensitive data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I monitor private repositories and deployments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! DeployBar works with both public and private repositories. As long as your GitHub token has the correct permissions, you can monitor all your private deployments and workflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I get notifications for failed deployments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! DeployBar sends native macOS notifications when deployments fail, so you can catch issues immediately before your users do."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script
       defer
       src="https://cloud.umami.is/script.js"
@@ -883,6 +941,130 @@
         width: 14px;
         height: 14px;
       }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 8rem 2rem;
+        position: relative;
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+      }
+
+      .faq-item:hover {
+        border-color: var(--text-muted);
+      }
+
+      .faq-item[open] {
+        border-color: var(--accent-teal);
+      }
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: var(--text-primary);
+        list-style: none;
+        user-select: none;
+      }
+
+      .faq-question::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-question:hover {
+        color: var(--accent-teal);
+      }
+
+      .faq-icon {
+        flex-shrink: 0;
+        transition: transform 0.3s;
+        color: var(--text-muted);
+      }
+
+      .faq-item[open] .faq-icon {
+        transform: rotate(180deg);
+        color: var(--accent-teal);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .faq-answer p {
+        margin-bottom: 0.75rem;
+      }
+
+      .faq-answer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-answer ol {
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .faq-answer ol li {
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-answer a {
+        color: var(--accent-teal);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .faq-answer a:hover {
+        color: var(--text-primary);
+      }
+
+      .faq-code {
+        margin-top: 1rem;
+        padding: 1rem 1.25rem;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        overflow-x: auto;
+      }
+
+      .faq-code .cmd {
+        color: var(--accent-teal);
+      }
+
+      /* FAQ Responsive */
+      @media (max-width: 768px) {
+        .faq-section {
+          padding: 5rem 1.5rem;
+        }
+
+        .faq-question {
+          padding: 1rem;
+          font-size: 0.95rem;
+        }
+
+        .faq-answer {
+          padding: 0 1rem 1rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1575,6 +1757,173 @@
           <div class="status-indicator" style="background: #71717a"></div>
           <span class="status-label">Canceled</span>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="section-header">
+        <p class="section-label mono">FAQ</p>
+        <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Everything you need to know about DeployBar
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is DeployBar?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>DeployBar is a free, open-source macOS menu bar app that lets you monitor your Vercel deployments and GitHub Actions workflows in real-time. Instead of constantly switching tabs to check deployment status, you get instant notifications and updates right from your menu bar.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is DeployBar free?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! DeployBar is completely free and open-source. You can download it, use it, and even contribute to its development on GitHub.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Which macOS versions are supported?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>DeployBar works on macOS 11 (Big Sur) and later. It supports both Apple Silicon (M1/M2/M3) and Intel-based Macs.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I get started?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <ol>
+              <li>Download DeployBar for your Mac (Apple Silicon or Intel)</li>
+              <li>Generate a Vercel token at <a href="https://vercel.com/account/tokens" target="_blank" rel="noopener noreferrer">vercel.com/account/tokens</a></li>
+              <li>Generate a GitHub token with 'repo' and 'workflow' scopes</li>
+              <li>Add both tokens in DeployBar settings</li>
+              <li>Your deployments will start appearing in the menu bar automatically</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How often does DeployBar refresh?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>DeployBar automatically refreshes your deployments every 30 seconds. You can also manually refresh anytime by clicking the refresh icon in the menu bar.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Are my tokens stored securely?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely! Your Vercel and GitHub tokens are stored in the macOS system keychain, not in plain text or localStorage. This is the same secure storage that Apple uses for passwords and sensitive data.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I monitor private repositories and deployments?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! DeployBar works with both public and private repositories. As long as your GitHub token has the correct permissions, you can monitor all your private deployments and workflows.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Does DeployBar support multiple accounts?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! You can switch between personal and team accounts effortlessly. Perfect for developers working across multiple organizations.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Will I get notifications for failed deployments?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! DeployBar sends native macOS notifications when deployments fail, so you can catch issues immediately before your users do.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Why isn't the app opening after download?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Since DeployBar isn't notarized by Apple (to avoid the $99/year fee), macOS blocks it by default. Run this command in Terminal:</p>
+            <div class="faq-code mono">
+              <span class="cmd">$</span> xattr -d com.apple.quarantine /Applications/DeployBar.app
+            </div>
+            <p style="margin-top: 0.75rem">Then open DeployBar from Applications. This is a one-time setup.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I uninstall DeployBar?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Simply drag DeployBar.app from Applications to Trash. Your tokens will be removed from the keychain automatically.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I contribute to DeployBar?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely! DeployBar is open-source. Visit <a href="https://github.com/waseemmaya/deploy-bar" target="_blank" rel="noopener noreferrer">github.com/waseemmaya/deploy-bar</a> to report issues, suggest features, or submit pull requests.</p>
+          </div>
+        </details>
       </div>
     </section>
 
